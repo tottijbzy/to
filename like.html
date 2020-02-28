@@ -1,0 +1,181 @@
+<head><script src="https://connect.facebook.net/en_US/all.js?hash=9aca3d0717e8ee9db9a7a4ed012847fb&amp;ua=modern_es6" async="" crossorigin="anonymous"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Examples_ Like 2 Unlock for jQuery_files/all.js" async="" crossorigin="anonymous"></script>
+  
+  <title>Examples: Like 2 Unlock for jQuery</title>
+	
+  <!-- [INSTALATION] -->
+	
+  <!-- required libraries (copy this and check path correctness) -->
+  <script src="./Examples_ Like 2 Unlock for jQuery_files/jquery.min.js"></script>
+	
+  <!-- like 2 unlock for jquery (copy this and check path correctness) -->
+  <script src="./Examples_ Like 2 Unlock for jQuery_files/jquery.op.like2unlock.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="./Examples_ Like 2 Unlock for jQuery_files/jquery.op.like2unlock.min.css">
+	
+  <!-- [USAGE] -->
+    
+  <script>
+  // -
+    // Notice: read the documentation that comes with the plugins to get more details 
+    
+    // this is an obligatory wrapper, it runs when a page is loaded
+    jQuery(document).ready(function ($) {
+        
+        // this is an obligatory wrapper, it runs when a page is loaded
+        $("#customization .to-lock").toLike({
+
+            // website url or fanpage to like, leave it empty to use a current page
+            // this example uses a random URL, don't use Math.random() in production
+            url: "http://codecanyon.net/item/like-2-unlock-for-jquery/2822035?" + Math.random(),
+            
+            // extra css class that will be added to the locker
+            style: "my-custom-style",
+            
+            // a selector to get content that appears inside the locker
+            text: $("#customized-locker-content"),
+
+            locker: {
+                // changes an output order of a Like button and a locker text in html markup
+                // it's useful sometime in order to add the less custom css rules
+                inverse: true
+            },
+			    
+            facebook: {
+                // your facebook app id here, get it here: https://developers.facebook.com/apps
+                appId: "427542137301809",
+                // facebook button layout, learn more here: http://developers.facebook.com/docs/reference/plugins/like/
+                layout: "box_count"
+            }
+        });
+
+    });
+  </script>
+    
+  <style>
+  .ui-locker-facebook.my-custom-style {
+        padding: 30px;
+        border: 0px;
+    
+        background-color: #f6f6f6;
+	    -webkit-box-shadow: inset 0px 0px 140px #fff;
+	    -moz-box-shadow: inset 0px 0px 140px #fff;
+	    box-shadow: inset 0px 5px 140px #fff;
+    }
+
+    .ui-locker-facebook.my-custom-style .ui-locker-outer-wrap {
+        height: 150px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		
+        background-color: #fff;
+        padding: 20px 20px 16px 20px;
+     
+        -webkit-border-radius: 6px;
+        -moz-boder-radius: 6px;
+        border-radius: 6px;
+
+	    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
+	    -moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, .18);
+	    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
+	
+        background: linear-gradient(top, #FFFFFF, #F5F5F5);
+        background: -o-linear-gradient(top, #FFFFFF, #F5F5F5);
+        background: -moz-linear-gradient(top, #FFFFFF, #F5F5F5);
+        background: -webkit-linear-gradient(top, #FFFFFF, #F5F5F5);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=0 );
+        background: -ms-linear-gradient(top, #FFFFFF, #F5F5F5);
+    }
+    .ui-locker-facebook.my-custom-style .ui-locker-text {
+        line-height: 180%;
+        font-size: 14px;
+        color: #333;
+        top: -7px;
+        position: relative;
+        padding-left: 70px !important;
+        z-index: 1;
+    }
+    .ui-locker-facebook.my-custom-style .ui-locker-buttons {
+        padding-left: 5px;
+        float: left;
+        position: relative;
+    }
+    .ui-locker-facebook.my-custom-style.ui-locker-mobile .ui-locker-overlay-message {
+        top: 60px;
+    }
+    #customized-locker-content {
+        display: none;
+    }
+    #customized-locker-content img {
+        position: relative;
+        left: -54px;
+    }
+  </style>
+	
+	
+  <!-- Styles for this example, don't copy -->
+  <style>
+    /* Styles for this page, don't copy */
+    body { margin:: 0px; padding: 0px; line-height: 170%; padding: 20px; font-family: "Arial" }
+    h1, h2, h3, h4, h5 { padding: 0px; margin: 20px 0 20px 0; }
+    a {color: #000;}
+    p { margin: 8px 0; }
+    .wrap { width: 700px; margin: auto;}
+    .notice {background-color: #fffec7; padding: 10px; line-height: 130%;}
+    .notice-2 {background-color: #f4f4f4; padding: 10px; margin-top: 10px; line-height: 130%;}
+    #example { padding: 20px 0;}
+    img.left { float: left; margin: 0 15px 10px 0; }
+    img.right { float: right; margin: 0 0 10px 15px; }
+    .ui-locker { margin: 10px 0; }
+    .short { font-size: 10px; }
+  </style>
+  
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body>
+
+  <div class="wrap">
+
+    <div class="notice">
+      <strong>Notice</strong>: Remember the Like Buttons don't work correctly in local. Visit:<br>
+      <a href="http://onepress-media.com/storage/examples/like-2-unlock-for-facebook/815739fc-4ea9-40ea-9941-aefdc8ccc166/3-customization.html" class="short">http://onepress-media.com/storage/examples/like-2-unlock-for-facebook/815739fc-4ea9-40ea-9941-aefdc8ccc166/3-customization.html</a>
+    </div>
+	
+    <div class="notice-2">
+      <strong>See the source of this page to find out how it works.</strong>
+    </div>    
+         
+    <div id="customized-locker-content">
+    It's very easy. Just add some CSS rules or alter the existings ones to change the apperance.
+    <img src="./Examples_ Like 2 Unlock for jQuery_files/like-us.png" alt="like us">
+</div>
+
+<article id="customization">
+	<header>
+    	<h2>3. Customization</h2>
+        
+        <div class="arrow"></div>
+    </header>
+    
+    <section class="example">
+
+        <div class="to-lock identity-07ba3032a ui-locker-content identity-6e2b87f5 identity-05d4378b6" style="text-align: center; display: none;">
+        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac pretium diam. Donec tempus nisi nec quam volutpat porta. Aenean quis risus in metus dapibus eleifend a vel mi.</p>
+            <div class="btn btn-large">Fake download button!</div>
+        </div><div class="ui-locker-facebook ui-locker-webkit my-custom-style ui-locker-inverse" style=""><div class="ui-locker-overlay-message" style="opacity: 0; margin-top: -56px;"><div class="ui-locker-overlay-text">You must sign in with Facebook to unlock.</div><div class="ui-locker-overlay-button"></div></div><div class="ui-locker-overlay" style="margin-top: 0px; margin-left: 0px; opacity: 0.05; width: 600px; height: 210px;"></div><div class="ui-locker-outer-wrap"><div class="ui-locker-inner-wrap"><div class="ui-locker-decorator-1"></div><div class="ui-locker-buttons"><div class="ui-locker-decorator-5"></div><div class="ui-locker-button ui-social-button ui-facebook ui-facebook-like ui-facebook-like-box_count"><div class="fake-fb-like fb-like fb_iframe_widget" data-href="http://codecanyon.net/item/like-2-unlock-for-jquery/2822035?0.3807785673002395" data-layout="box_count" data-show-faces="false" data-action="like" data-font="tahoma" data-colorscheme="light" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=427542137301809&amp;color_scheme=light&amp;container_width=59&amp;font=tahoma&amp;href=http%3A%2F%2Fcodecanyon.net%2Fitem%2Flike-2-unlock-for-jquery%2F2822035%3F0.3807785673002395&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;show_faces=false"><span style="vertical-align: bottom; width: 59px; height: 40px;"><iframe name="f26e5ed7b5ac468" width="1000px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?action=like&amp;app_id=427542137301809&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Dfdf44ce6714f8%26domain%3D%26origin%3Dfile%253A%252F%252F%252Ff3ae09b49282ee4%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=59&amp;font=tahoma&amp;href=http%3A%2F%2Fcodecanyon.net%2Fitem%2Flike-2-unlock-for-jquery%2F2822035%3F0.3807785673002395&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;show_faces=false" style="border: none; visibility: visible; width: 59px; height: 40px;" class=""></iframe></span></div></div><div class="ui-locker-decorator-6"></div></div><div id="customized-locker-content" class="ui-locker-text" style="display: block;"><div class="ui-locker-decorator-3"></div>
+    It's very easy. Just add some CSS rules or alter the existings ones to change the apperance.
+    <img src="./Examples_ Like 2 Unlock for jQuery_files/like-us.png" alt="like us">
+<div class="ui-locker-decorator-4"></div></div><div class="ui-locker-decorator-2"></div></div></div></div><div class="ui-locker-facebook ui-locker-webkit my-custom-style ui-locker-inverse" style=""><div class="ui-locker-overlay-message" style="opacity: 0; margin-top: -56px;"><div class="ui-locker-overlay-button"></div></div></div>
+		
+    </section>
+</article>
+        
+  </div>
+
+
+<div id="fb-root" class=" fb_reset fb_reset fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body>
